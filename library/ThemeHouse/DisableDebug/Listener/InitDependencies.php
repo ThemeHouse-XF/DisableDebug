@@ -7,7 +7,7 @@ class ThemeHouse_DisableDebug_Listener_InitDependencies extends ThemeHouse_Liste
         if ($xenOptions->mctrades_enableDebugMode_selection) {
             XenForo_Application::setDebugMode(true);
         }
-        if ($xenOptions->waindigo_disableDebugMode_section != 'none') {
+        if ($xenOptions->th_disableDebugMode_section != 'none') {
             if ($dependencies instanceof XenForo_Dependencies_Public && $xenOptions->th_disableDebugMode_section != 'admin') {
                 XenForo_Application::setDebugMode(false);
             } elseif ($dependencies instanceof XenForo_Dependencies_Admin && $xenOptions->th_disableDebugMode_section  != 'public') {
