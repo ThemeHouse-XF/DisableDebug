@@ -8,8 +8,8 @@
   <code_events/>
   <code_event_listeners>
     <listener event_id="controller_pre_dispatch" execute_order="10" callback_class="ThemeHouse_Listener_ControllerPreDispatch" callback_method="controllerPreDispatch" active="1" hint="" description=""/>
-    <listener event_id="file_health_check" execute_order="10" callback_class="ThemeHouse_DisableDebugMode_Listener_FileHealthCheck" callback_method="fileHealthCheck" active="1" hint="" description=""/>
-    <listener event_id="init_dependencies" execute_order="10" callback_class="ThemeHouse_DisableDebugMode_Listener_InitDependencies" callback_method="initDependencies" active="1" hint="" description=""/>
+    <listener event_id="file_health_check" execute_order="10" callback_class="ThemeHouse_DisableDebug_Listener_FileHealthCheck" callback_method="fileHealthCheck" active="1" hint="" description=""/>
+    <listener event_id="init_dependencies" execute_order="10" callback_class="ThemeHouse_DisableDebug_Listener_InitDependencies" callback_method="initDependencies" active="1" hint="" description=""/>
   </code_event_listeners>
   <cron/>
   <email_templates/>
