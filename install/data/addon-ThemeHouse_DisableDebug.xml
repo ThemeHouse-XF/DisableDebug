@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="Waindigo_DisableDebugMode" title="Disable Debug Mode by Waindigo" version_string="1.0.1" version_id="1398953096" url="https://waindigo.com/" install_callback_class="Waindigo_Install" install_callback_method="install" uninstall_callback_class="Waindigo_Install" uninstall_callback_method="uninstall">
+<addon addon_id="ThemeHouse_DisableDebug" title="[⌂ + MCT] Disable Debug Mode" version_string="1.0.1" version_id="1447261020" url="https://mctrades.org/" install_callback_class="ThemeHouse_Install" install_callback_method="install" uninstall_callback_class="ThemeHouse_Install" uninstall_callback_method="uninstall">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -7,29 +7,41 @@
   <admin_template_modifications/>
   <code_events/>
   <code_event_listeners>
-    <listener event_id="controller_pre_dispatch" execute_order="10" callback_class="Waindigo_Listener_ControllerPreDispatch" callback_method="controllerPreDispatch" active="1" hint="" description=""/>
-    <listener event_id="file_health_check" execute_order="10" callback_class="Waindigo_DisableDebugMode_Listener_FileHealthCheck" callback_method="fileHealthCheck" active="1" hint="" description=""/>
-    <listener event_id="init_dependencies" execute_order="10" callback_class="Waindigo_DisableDebugMode_Listener_InitDependencies" callback_method="initDependencies" active="1" hint="" description=""/>
+    <listener event_id="controller_pre_dispatch" execute_order="10" callback_class="ThemeHouse_Listener_ControllerPreDispatch" callback_method="controllerPreDispatch" active="1" hint="" description=""/>
+    <listener event_id="file_health_check" execute_order="10" callback_class="ThemeHouse_DisableDebugMode_Listener_FileHealthCheck" callback_method="fileHealthCheck" active="1" hint="" description=""/>
+    <listener event_id="init_dependencies" execute_order="10" callback_class="ThemeHouse_DisableDebugMode_Listener_InitDependencies" callback_method="initDependencies" active="1" hint="" description=""/>
   </code_event_listeners>
   <cron/>
   <email_templates/>
   <email_template_modifications/>
   <optiongroups>
-    <group group_id="waindigo_disableDebugMode" display_order="2000" debug_only="0"/>
+    <group group_id="th_disableDebugMode" display_order="2000" debug_only="0"/>
+    <option option_id="mctrades_enableDebugMode_iprestrict_addresses" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="th_disableDebugMode" display_order="3"/>
+    </option>
+    <option option_id="mctrades_enableDebugMode_iprestrict_selection" edit_format="onoff" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="th_disableDebugMode" display_order="2"/>
+    </option>
     <option option_id="mctrades_enableDebugMode_selection" edit_format="onoff" data_type="string" can_backup="1">
       <default_value></default_value>
       <edit_format_params></edit_format_params>
       <sub_options></sub_options>
-      <relation group_id="waindigo_disableDebugMode" display_order="0"/>
+      <relation group_id="th_disableDebugMode" display_order="0"/>
     </option>
-    <option option_id="waindigo_disableDebugMode_section" edit_format="radio" data_type="string" can_backup="1">
+    <option option_id="th_disableDebugMode_section" edit_format="radio" data_type="string" can_backup="1">
       <default_value>all</default_value>
       <edit_format_params>none={xen:phrase mctrades_nowhere_disabledebugmode}
-admin={xen:phrase waindigo_admin_only_disabledebugmode}
-public={xen:phrase waindigo_public_only_disabledebugmode}
-all={xen:phrase waindigo_admin_and_public_disabledebugmode}</edit_format_params>
+admin={xen:phrase th_admin_only_disabledebugmode}
+public={xen:phrase th_public_only_disabledebugmode}
+all={xen:phrase th_admin_and_public_disabledebugmode}</edit_format_params>
       <sub_options></sub_options>
-      <relation group_id="waindigo_disableDebugMode" display_order="1"/>
+      <relation group_id="th_disableDebugMode" display_order="1"/>
     </option>
   </optiongroups>
   <permissions>
@@ -39,23 +51,27 @@ all={xen:phrase waindigo_admin_and_public_disabledebugmode}</edit_format_params>
   </permissions>
   <phrases>
     <phrase title="mctrades_nowhere_disabledebugmode" version_id="1398953096" version_string="1.0.1"><![CDATA[Nowhere]]></phrase>
-    <phrase title="option_group_waindigo_disableDebugMode" version_id="1398947395" version_string="1.0.0"><![CDATA[Disable Debug Mode by Waindigo]]></phrase>
-    <phrase title="option_group_waindigo_disableDebugMode_description" version_id="1398947395" version_string="1.0.0"><![CDATA[Options for the Disable Debug Mode by Waindigo add-on.]]></phrase>
+    <phrase title="option_group_th_disableDebugMode" version_id="1398947395" version_string="1.0.0"><![CDATA[Disable Debug Mode by ThemeHouse and MCTrades]]></phrase>
+    <phrase title="option_group_ThemeHouse_disableDebugMode_description" version_id="1398947395" version_string="1.0.0"><![CDATA[Options for the Disable Debug Mode by ThemeHouse add-on.]]></phrase>
+    <phrase title="option_mctrades_enableDebugMode_iprestrict_addresses" version_id="1398953096" version_string="1.0.1"><![CDATA[Allow Debug Mode for IP Addresses]]></phrase>
+    <phrase title="option_mctrades_enableDebugMode_iprestrict_addresses_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Separate IP addresses with a comma]]></phrase>
+    <phrase title="option_mctrades_enableDebugMode_iprestrict_selection" version_id="1398953096" version_string="1.0.1"><![CDATA[Enable IP Restriction]]></phrase>
+    <phrase title="option_mctrades_enableDebugMode_iprestrict_selection_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Select to disable debug mode for IP addresses that do not match.]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_selection" version_id="1398953096" version_string="1.0.1"><![CDATA[Enable Debug Mode Globally]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_selection_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Enables debug mode globally; can be overridden below.]]></phrase>
-    <phrase title="option_waindigo_disableDebugMode_section" version_id="1398947395" version_string="1.0.0"><![CDATA[Disable debug mode]]></phrase>
-    <phrase title="option_waindigo_disableDebugMode_section_explain" version_id="1398947395" version_string="1.0.0"><![CDATA[If admin or public selected, this add-on will only disable debug mode (if enabled in config.php file) for the specified section, leaving it enabled for the unselected section.]]></phrase>
-    <phrase title="waindigo_admin_and_public_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Both admin and public pages]]></phrase>
-    <phrase title="waindigo_admin_only_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Admin Control Panel only]]></phrase>
-    <phrase title="waindigo_public_only_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Public front-end pages only]]></phrase>
+    <phrase title="option_th_disableDebugMode_section" version_id="1398947395" version_string="1.0.0"><![CDATA[Disable debug mode]]></phrase>
+    <phrase title="option_th_disableDebugMode_section_explain" version_id="1398947395" version_string="1.0.0"><![CDATA[If admin or public selected, this add-on will only disable debug mode (if enabled in config.php file) for the specified section, leaving it enabled for the unselected section.]]></phrase>
+    <phrase title="th_admin_and_public_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Both admin and public pages]]></phrase>
+    <phrase title="th_admin_only_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Admin Control Panel only]]></phrase>
+    <phrase title="th_public_only_disabledebugmode" version_id="1398947395" version_string="1.0.0"><![CDATA[Public front-end pages only]]></phrase>
   </phrases>
   <route_prefixes/>
   <style_properties/>
   <templates/>
   <public_template_modifications>
-    <modification template="footer" modification_key="waindigo_copyrightNotice_disableDebugMode" description="Copyright notice for Disable Debug Mode by Waindigo" execution_order="1" enabled="1" action="callback">
+    <modification template="footer" modification_key="th_copyrightNotice_disableDebugMode" description="Copyright notice for [⌂ + MCT] Disable Debug Mode" execution_order="1" enabled="1" action="callback">
       <find><![CDATA[/{xen:phrase (?:xenforo|extra)_copyright}/]]></find>
-      <replace><![CDATA[Waindigo_Listener_InitDependencies::copyrightNotice]]></replace>
+      <replace><![CDATA[ThemeHouse_Listener_InitDependencies::copyrightNotice]]></replace>
     </modification>
   </public_template_modifications>
   <bb_code_media_sites/>
