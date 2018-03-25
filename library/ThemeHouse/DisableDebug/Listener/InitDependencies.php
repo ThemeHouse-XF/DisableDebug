@@ -15,7 +15,7 @@ class ThemeHouse_DisableDebug_Listener_InitDependencies extends ThemeHouse_Liste
             }
         }
         if ($xenOptions->mctrades_enableDebugMode_iprestrict_selection) {
-                if (!in_array($_SERVER['REMOTE_ADDR'], explode(",", $xenOptions->mctrades_enableDebugMode_iprestrict_addresses))) {
+                if (!in_array($_SERVER['REMOTE_ADDR'], explode(", ", $xenOptions->mctrades_enableDebugMode_iprestrict_addresses))) {
                         XenForo_Application::setDebugMode(false);
                 }
         }
