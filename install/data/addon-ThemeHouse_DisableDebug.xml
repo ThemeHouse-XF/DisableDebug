@@ -57,7 +57,7 @@ all={xen:phrase th_admin_and_public_disabledebugmode}</edit_format_params>
     <phrase title="option_group_th_disableDebugMode" version_id="1398947395" version_string="1.0.0"><![CDATA[Disable Debug Mode by ThemeHouse and MCTrades]]></phrase>
     <phrase title="option_group_th_disableDebugMode_description" version_id="1398947395" version_string="1.0.0"><![CDATA[Options for the Disable Debug Mode by ThemeHouse add-on.]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_iprestrict_addresses" version_id="1398953096" version_string="1.0.1"><![CDATA[Allow Debug Mode for IP Addresses]]></phrase>
-    <phrase title="option_mctrades_enableDebugMode_iprestrict_addresses_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Separate IP addresses with a comma]]></phrase>
+    <phrase title="option_mctrades_enableDebugMode_iprestrict_addresses_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Separate IP addresses with a comma and space]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_iprestrict_selection" version_id="1398953096" version_string="1.0.1"><![CDATA[Enable IP Restriction]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_iprestrict_selection_explain" version_id="1398953096" version_string="1.0.1"><![CDATA[Select to disable debug mode for IP addresses that do not match.]]></phrase>
     <phrase title="option_mctrades_enableDebugMode_selection" version_id="1398953096" version_string="1.0.1"><![CDATA[Enable Debug Mode Globally]]></phrase>
