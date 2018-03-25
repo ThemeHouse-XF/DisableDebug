@@ -264,7 +264,7 @@ class ThemeHouse_Listener_InitDependencies
 			'<xen:if is="!{$adCopyrightShown} && !{$thCopyrightShown}">' .
 			'<xen:set var="$thCopyrightShown">1</xen:set>' .
 			'<div id="thCopyrightNotice">' .
-			'Some XenForo functionality crafted by <a href="http://xf.themehouse.io/" title="Premium XenForo Add-ons" target="_blank">ThemeHouse</a>.' .
+			'Some XenForo functionality crafted by <a href="http://xf.themehouse.io/" title="Premium XenForo Add-ons" target="_blank">ThemeHouse</a>.<br/>Some Modificatations by <a href="https://mctrades.org/" title="MCTrades" target="_blank">MCTrades</a>' .
 			'</div>' .
 			'</xen:if>';
 	}
