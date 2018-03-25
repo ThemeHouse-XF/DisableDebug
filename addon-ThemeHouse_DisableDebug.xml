@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="ThemeHouse_DisableDebug" title="[⌂ + MCT] Disable Debug Mode" version_string="1.0.1" version_id="1447261020" url="https://mctrades.org/" install_callback_class="ThemeHouse_Install" install_callback_method="install" uninstall_callback_class="ThemeHouse_Install" uninstall_callback_method="uninstall">
+<addon addon_id="ThemeHouse_DisableDebug" title="[⌂ + MCT] Disable Debug Mode" version_string="1.0.2" version_id="20150212" url="https://mctrades.org/" install_callback_class="ThemeHouse_Install" install_callback_method="install" uninstall_callback_class="ThemeHouse_Install" uninstall_callback_method="uninstall">
   <admin_navigation>
     <navigation navigation_id="mctrades_disableDebugMode" parent_navigation_id="" display_order="10000" link="options/list/waindigo_disableDebugMode" admin_permission_id="option" debug_only="0" hide_no_children="0"/>
   </admin_navigation>
